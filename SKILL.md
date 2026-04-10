@@ -12,6 +12,14 @@ description: >
 
 Operate the Obsidian vault at `/Users/anner/notes` via terminal. The vault name is `Work`.
 
+## Personal Preferences — `self/`
+
+**Before creating or placing any note, read all `.md` files in the `self/` directory.** This folder contains the vault owner's personal note-taking preferences: directory structure, naming conventions, topic routing rules, and more. These preferences are the ground truth for where and how to organize notes.
+
+- `self/` is gitignored — it holds private configuration, not shared with the skill repo
+- If you cannot determine the correct location for a note, check the latest vault directory structure first (`ls` the vault), then consult `self/` preferences
+- When the vault structure changes (new folders, reorganized topics), update the relevant files in `self/`
+
 ## Obsidian CLI
 
 The `obsidian` CLI binary is at:
@@ -91,3 +99,4 @@ Create `.base` files for database-like views. See [bases-formulas.md](references
 - **Frontmatter**: Every note must have YAML frontmatter (`---` delimited)
 - **Attachments**: Place in the note's local `attachments/` folder
 - **Language**: Note content follows the language of the existing note (Chinese for work notes, English for technical docs as appropriate)
+- **Note placement**: Consult `self/` preferences for topic routing and naming conventions before creating notes

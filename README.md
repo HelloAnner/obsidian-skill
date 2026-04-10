@@ -30,7 +30,7 @@ A Claude Code skill for operating an Obsidian vault from the terminal. Enables n
 
 ```
 SKILL.md                              # Root skill definition
-references/
+references/                           # Shared reference documentation
 ├── obsidian-markdown.md              # Markdown syntax reference
 ├── obsidian-cli.md                   # CLI command reference
 ├── vault-properties.md               # Custom property system
@@ -41,7 +41,20 @@ references/
 ├── callouts.md                       # Callout types
 ├── embeds.md                         # Embed syntax
 └── bases-formulas.md                 # Bases & formula functions
+self/                                 # Personal preferences (gitignored)
+└── *.md                              # Your note-taking habits & vault routing rules
 ```
+
+## Personal Preferences — `self/`
+
+The `self/` directory stores your personal note-taking preferences — vault structure, naming conventions, topic routing rules, and any other habits that help the skill place notes correctly.
+
+**This folder is gitignored.** It is not shared with the repo, so you can safely put private configuration here.
+
+If you're using this skill for your own vault, create your own `self/*.md` files describing:
+- Your vault's directory structure and what each folder is for
+- Naming conventions (date formats, prefixes, language preferences)
+- Topic routing rules — which type of content goes where
 
 ## Installation
 
